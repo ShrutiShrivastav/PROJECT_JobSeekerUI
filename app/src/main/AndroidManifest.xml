@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.projectjobseekerui">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PROJECTJOBSEEKERUI">
+
+        <activity android:name=".LoginActivity" android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".DashBoardActivity"  android:exported="true"
+            android:parentActivityName=".JSDetails"/>
+
+        <activity android:name=".JSCareerInfo"  android:exported="true"
+            android:parentActivityName=".JSPersonalInfo" />
+        <activity
+            android:name=".JSPassword"  android:exported="true"
+            android:parentActivityName=".JSCareerInfo" />
+        <activity
+            android:name=".JSDetails"  android:exported="true"
+            android:parentActivityName=".JSPassword"/>
+        <activity
+            android:name=".JSPersonalInfo"   android:exported="true"
+            android:parentActivityName=".LoginActivity"/>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
